@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document_</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<center><h2>Details Of Context</h2></center>
+	<p> Some Instruction and example..</p>
+	<br>
+	<br>
+	<label for="name">Description of the context</label>
+	<input id="name" name="name" type="text" class="form-control input-lg" required>
+    
+    <br>
+    <br>
+    <label for="phases">Number of Phases</label>
+    <input type="text" name="phases" id="phases">
+    <h2><center>Details Of Phase</center></h2>
+    <div id="NoOfPhases"></div>
+    <div id="addDiv">
+    	<p id="addDiv_phase"></p>
+    	<h1>wasso</h1>
+
+    </div>
+
+
+
+
+
+
+<script type="text/javascript">
+	var $phases = $('#phases');
+	var $No_of_phases = $('#NoOfPhases')
+	$('#addDiv').hide()
+	// $No_of_phases.hide()
+	$phases.change(function(){
+		for(var i=0;i<parseInt($phases.val());i++){
+			var c=i;
+			$('#addDiv_phase').text('Phase'+c);
+			$No_of_phases.append($('#addDiv').html())
+			
+		}
+
+		});
+
+</script>
+</body>
+</html>
