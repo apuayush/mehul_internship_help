@@ -1,3 +1,62 @@
-h2{
-	font-family: Calibri;
+body {
+	font-size:15px;
+	font-family: Tahoma;
+	/*color:#2F4F4F;*/
+	background-color: black;
+}
+
+input {
+	width:200px;
+	height:22px;
+	font-size:15px;
+}
+li{
+	list-style-type: none;
+}
+
+select {
+	width:150px;
+	height:28px;
+	font-size:15px;
+}
+
+h2 {
+	text-align:center;
+	color:black;
+}
+
+#btn1 {
+	height: 60px;
+	width:180px;
+	border-radius: 10px;
+	border: 0;
+	background: #16A085;
+	font-family:Tahoma;
+	font-size:14px;
+	color:white;
+	cursor:pointer;
+}
+
+#btn2 {
+	height: 60px;
+	width:180px;
+	border-radius: 10px;
+	border: 0;
+	background: #F39C12;
+	font-family:Tahoma;
+	font-size:14px;
+	color:white;
+	cursor:pointer;
+}
+
+p{
+	font-size:15px;
+	color:red;
+	font-family:all;
+}
+#phase_details{
+	display:none;
+}
+#container #phase_details{
+	display:inline-block;
 }

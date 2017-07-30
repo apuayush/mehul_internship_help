@@ -1,50 +1,56 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-	<title>Document_</title>
+	<title>MetaData File</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+	<script src="script.js" type="text/javascript"></script>
+	</head>
 <body>
-	<center><h2>Details Of Context</h2></center>
-	<p> Some Instruction and example..</p>
-	<br>
-	<br>
-	<label for="name">Description of the context</label>
-	<input id="name" name="name" type="text" class="form-control input-lg" required>
-    
-    <br>
-    <br>
-    <label for="phases">Number of Phases</label>
-    <input type="text" name="phases" id="phases">
-    <h2><center>Details Of Phase</center></h2>
-    <div id="NoOfPhases"></div>
-    <div id="addDiv">
-    	<p id="addDiv_phase"></p>
-    	<h1>wasso</h1>
-
-    </div>
-
-
-
-
-
-
-<script type="text/javascript">
-	var $phases = $('#phases');
-	var $No_of_phases = $('#NoOfPhases')
-	$('#addDiv').hide()
-	// $No_of_phases.hide()
-	$phases.change(function(){
-		for(var i=0;i<parseInt($phases.val());i++){
-			var c=i;
-			$('#addDiv_phase').text('Phase'+c);
-			$No_of_phases.append($('#addDiv').html())
-			
-		}
-
-		});
-
-</script>
+	<h2> ENTER DETAILS FOR iSAT DIAGRAM </h2>
+	<hr>
+	<p>To Fill Strata Details after giving Number of Stratas Click 'Fill Strata Details' button.</p> 
+	<p>After filling Strata Details Click 'CSV Files' to get CSV files for entered data.</p><br>
+	<form>
+		<center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#strata_name00"><input type="button" onclick="StrataDetails()" value="FILL STRATA DETAILS" id="btn1"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" value="CSV FILES" onclick="GetDetails()" id="btn2">
+		<br><br><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><b>Details Of Context </b>&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;</label><input type="text" name="details_of_context"><br><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><b>Number of Phase </b>&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;</label><input type="number" id="insert" name="datacollected" ><br><br>
+		<br></center>
+		
+			<div id="container" ></div>
+			<span id="phase_details" name = "phase">
+				<ul>
+					<li>phase Name : <input type="text" name="phase_name"></li>
+					<li>Data Type of phase :<select name="data_type">
+						<option value="radio">Radio</option>
+						<option value="ordinal">Ordinal</option>
+						<option value="nominal">Nominal</option>
+					</select></li>
+					<li>Nature of phase: <select name="nature_of_phase">
+						<option value="sequential">Sequential</option>
+						<option value="diverging">Diverging</option>
+						<option value="qualitative">Qualitative</option>
+					</select>
+					</li>
+					<li>
+						Can Data be stratified: <select name="data_stratification">
+						<option value="yes">Yes</option>
+						<option value="no">No</option>
+					</select>
+					</li>
+						<li>
+							Number of stratas :<input type="number" name="number_of_stratas">
+						</li>
+				</ul>
+			</span>
+	</form>
+	
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ -->
 </body>
 </html>
